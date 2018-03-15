@@ -1,0 +1,50 @@
+group 'dianrong.borrowerportal.loanriver'
+version '0.0.1-SNAPSHOT'
+
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.2.RELEASE'
+	}
+	repositories {
+		maven {
+			url "http://nexus.dianrong.com/nexus/content/groups/public/"
+		}
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.3'
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+jar {
+	baseName = 'BorrowerPortal'
+}
+
+
+repositories {
+	maven {
+		url "http://nexus.dianrong.com/nexus/content/groups/public/"
+	}
+}
+
+
+dependencies {
+	compile "com.google.guava:guava:11.0.2"
+}
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.5'
+}
