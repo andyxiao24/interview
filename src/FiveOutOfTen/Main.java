@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        boolean reses1[] = new boolean[]{false, false, false, false, false, false, false, false};
+        boolean reses1[] = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, true};
         boolean reses2[] = new boolean[]{false, false, false, true, true, true, true, false};
         boolean reses3[] = new boolean[]{true, true, true, false, false, false, false, false};
         boolean reses4[] = new boolean[]{false, true, false, false, false, true, false, false};

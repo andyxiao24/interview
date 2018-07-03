@@ -7,9 +7,7 @@ buildscript {
 		springBootVersion = '1.5.2.RELEASE'
 	}
 	repositories {
-		maven {
-			url "http://nexus.dianrong.com/nexus/content/groups/public/"
-		}
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -34,9 +32,7 @@ jar {
 
 
 repositories {
-	maven {
-		url "http://nexus.dianrong.com/nexus/content/groups/public/"
-	}
+	jcenter()
 }
 
 
