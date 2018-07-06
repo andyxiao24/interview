@@ -6,11 +6,36 @@ import java.util.Queue;
 
 /**
  * Created by pengxiao on 2018/7/3.
+ * f(1)=10
+ f(2)=30
+ f(3)=90
+ f(4)=270
+ f(5)=810
+ f(6)=2400
+ f(7)=7140
+ f(8)=21240
+ f(9)=63180
+ f(10)=187920
+ f(11)=558960
+ f(12)=1662600
+ f(13)=4945320
+ f(14)=14709600
+ f(15)=43752960
+ f(16)=130140960
+ f(17)=387097680
+ f(18)=1151402400
+ f(19)=3424788000
+ f(20)=10186858080
+ f(21)=30300292320
+ f(22)=90126681600
+ f(23)=268077240000
+ f(24)=797382144000
+ f(25)=2371772715840
  */
 public class RabbitMain {
     public static void main(String [] args) {
-        for(int i = 1; i < 25; i++) {
-            System.out.println(String.format("f(%d)=%d, %d,", i, count(i), count2(i)));
+        for(int i = 1; i <= 25; i++) {
+            System.out.println(String.format("f(%d)=%d", i, count(i), count2(i)));
         }
 
     }
