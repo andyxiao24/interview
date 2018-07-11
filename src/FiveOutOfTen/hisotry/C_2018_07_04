@@ -1,12 +1,4 @@
-package FiveOutOfTen.hisotry;
-
-/**
- * Created by pengxiao on 2018/7/4.
- * chencong
- */
-public class C_2018_07_04 {
-    /*
-    package FiveOutOfTen;
+package FiveOutOfTen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +22,4 @@ public class CheckResult {
         }
 
     }
-}
-
-     */
 }

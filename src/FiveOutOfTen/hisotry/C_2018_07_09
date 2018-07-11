@@ -1,0 +1,33 @@
+ package FiveOutOfTen;
+
+     import com.google.common.collect.Queues;
+
+     import java.util.Queue;
+
+     //需要实现下面的class，这个函数被调用的最近10次，如果有6次输入的是false，
+     // 请输出“ERROR!”
+     public class CheckResult {
+
+     Queue<Boolean> queue = Queues.newConcurrentLinkedQueue();
+     volatile int count = 0;
+
+     public void checkResult(boolean result) {
+     int size = queue.size();
+     if (!result){
+     ++count;
+     }
+     queue.add(result);
+     if (queue.size()>10){
+     boolean remove = queue.poll();
+     if (!remove){
+     --count;
+     }
+     }
+
+     if (count >=6){
+     System.out.println("ERROR!");
+     }
+
+
+     }
+     }

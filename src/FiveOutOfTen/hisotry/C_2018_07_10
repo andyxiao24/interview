@@ -1,0 +1,29 @@
+package FiveOutOfTen;
+
+import com.google.common.collect.Lists;
+
+import java.util.List;
+
+//需要实现下面的class，这个函数被调用的最近10次，如果有6次输入的是false，
+// 请输出“ERROR!”
+public class CheckResult {
+    List<Boolean> booleanList = Lists.newArrayList();
+
+    public void checkResult(boolean result) {
+
+        booleanList.add(result);
+        int num = 0;
+        int size = booleanList.size();
+        if(size>10){
+            booleanList.remove(0);
+        }
+        for (int i = 0;i<booleanList.size();i++) {
+            if(booleanList.get(i)==false){
+                num++;
+            }
+            if(num>=6){
+                System.out.println("ERROR!");break;
+            }
+        }
+    }
+}
