@@ -2,6 +2,8 @@ package Rabiit;
 
 import com.google.common.collect.Queues;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Queue;
 
 /**
@@ -34,7 +36,7 @@ import java.util.Queue;
  */
 public class RabbitMain {
     public static void main(String [] args) {
-        for(int i = 1; i <= 25; i++) {
+        for(int i = 1; i <= 30; i++) {
             System.out.println(String.format("f(%d)=%d", i, count(i), count2(i)));
         }
 
@@ -65,5 +67,27 @@ public class RabbitMain {
             longQueue.add(newBorn);
         }
         return sum;
+    }
+
+
+    public static Map<Integer, Long> map = new HashMap<Integer, Long>();
+
+    private static long count3(int year) {
+
+        if(year == 1)return 10;
+        if(year == 2)return 30;
+        if(year == 3)return 90;
+        if(year == 4)return 270;
+        if(year == 5)return 810;
+        if(year == 6)return 2400;
+
+        if(!map.containsKey(year)){
+
+            Long num = (count3(year-1)*3-count3(year-5)*2);
+            map.put(year,num);
+            return map.get(year);
+        }
+
+        return  map.get(year);
     }
 }
