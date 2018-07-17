@@ -1,0 +1,64 @@
+package FiveOutOfTen;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+//需要实现下面的class，这个函数被调用的最近10次，如果有6次输入的是false，
+// 请输出“ERROR!”
+public class CheckResult {
+    int count = 0;
+    List<Boolean> list = new ArrayList<>();
+//    Map<Integer,Integer> map = new HashMap<>();
+
+    public void checkResult(boolean result) {
+//        list.add(result);
+//        if (list.size()>10){
+//            if (result)
+//        }
+//        if (result==false){
+//            count++;
+//        }
+//
+//        if (count>=6){
+//            System.out.println("Error");
+//        }
+
+//        if(result==false){
+//            map.put(count,1);
+//        }else {
+//            map.put(count,0);
+//        }
+//        count ++;
+//
+//        if (count>=5&&count<10){
+//            int res = 0;
+//            for (int i=0;i<map.size();i++){
+//                if (map.get(i)==1){
+//                    res++;
+//                }
+//            }
+//            if (res>=6){
+//                System.out.println("Error");
+//            }
+//        }
+//        if (count>=10){
+//            int res = 0;
+//            int side = map.size()-10;
+//            for (int j=map.size();j>side;j--){
+//                if (map.get(j)==1){
+//                    res ++;
+//                }
+//            }
+//            if (res>=6){
+//                System.out.println("Error");
+//            }
+//        }
+//        List<Boolean> result1 = new ArrayList<>();
+
+
+        System.out.println("ERROR!");
+    }
+}
