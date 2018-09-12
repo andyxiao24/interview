@@ -1,0 +1,1 @@
+package AnyCircle;import com.sun.tools.javac.util.Pair;import java.util.Set;/** * Created by pengxiao on 2018/9/12. */public class AnyCircleCheckImpl implements AnyCircleCheck {    @Override    public boolean hasAnyCircle(Set<Pair<Integer, Integer>> testData) {        return false;    }}
